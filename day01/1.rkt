@@ -17,5 +17,14 @@
               (run v1 (string->number (car v3)) (cdr v3))
               (run v1 '() (cdr v3))))))
 
-(print (apply max (run '() '() calories)))
+(define calories-sum (run '() '() calories))
+(define part-one-answer (apply max calories-sum))
+(define part-two-answer
+  (let ([sorted (sort calories-sum >)])
+    (+ (first sorted) (second sorted) (third sorted))))
+
+(display part-one-answer)
+(display "\n")
+(display part-two-answer)
+(display "\n")
 
