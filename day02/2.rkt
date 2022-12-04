@@ -29,8 +29,7 @@
 (define part-two-answer
   (apply +
          (map
-          (lambda
-              (strategy)
+          (lambda (strategy)
             (match strategy
               [(list "A" "X") (+ 3 0)]
               [(list "A" "Y") (+ 1 3)]
